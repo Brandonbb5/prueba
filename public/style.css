@@ -1,0 +1,84 @@
+body{
+    scroll-behavior: smooth;
+}
+
+.names-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 20px;
+    max-height: 500px;
+    overflow-y: auto;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    align-items: start;
+    grid-auto-rows: min-content;
+    position: relative;
+}
+
+.name-item {
+    position: relative;
+    padding: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    overflow: hidden;
+}
+
+.name-item.active {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    overflow: visible;
+}
+
+.details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+.name-item.active .details {
+    max-height: 500px;
+}
+
+#searchInput {
+    width: 300px;
+    padding: 10px;
+    margin: 20px;
+}
+
+#btn_mostrar_mas{
+   background-color: #563d7c;
+}
+
+.btn_container { 
+    width: 97%;
+    margin: 0 auto; 
+    margin-bottom: 10px;
+}
+
+.no-results-message {
+    text-align: center;
+    font-size: 18px;
+    color: #888;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.names-container.empty {
+    min-height: 200px; 
+}
+
+header{
+    height: 35%;
+    background-color: #563d7c;
+}
